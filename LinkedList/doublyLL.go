@@ -1,4 +1,5 @@
 package main
+
 import "fmt"
 
 type Node struct {
@@ -7,12 +8,12 @@ type Node struct {
 	next *Node
 }
 
-type List struct{
+type List struct {
 	head *Node
 	tail *Node
 }
 
-func (l *List)insert(d int) {
+func (l *List) insert(d int) {
 	list := &Node{data: d, prev: nil, next: nil}
 	if l.head != nil {
 		l.head = list
@@ -36,7 +37,6 @@ func show(l *List) {
 	}
 	fmt.Println()
 }
-
 
 func main() {
 	dl := List{}

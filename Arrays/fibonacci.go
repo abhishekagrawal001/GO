@@ -8,9 +8,9 @@ func fib(n int) {
 	// fmt.Printf("%v %v ", a,b)
 	for i := 1; i <= n; i++ {
 		fmt.Printf("%v ", a)
-		c = a + b;
-		a = b;
-		b = c;
+		c = a + b
+		a = b
+		b = c
 	}
 }
 func main() {

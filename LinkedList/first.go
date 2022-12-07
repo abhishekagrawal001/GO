@@ -8,11 +8,11 @@ type node struct {
 }
 
 type linkedList struct {
-	head *node
+	head   *node
 	length int
 }
 
-func (l *linkedList) append (n *node){
+func (l *linkedList) append(n *node) {
 	second := l.head
 	l.head = n
 	l.head.next = second

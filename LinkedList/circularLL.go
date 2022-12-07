@@ -1,11 +1,12 @@
 package main
+
 import "fmt"
 
 type Node struct {
 	data int
 	next *Node
 }
-type linkedList struct{
+type linkedList struct {
 	head *Node
 }
 
@@ -45,7 +46,7 @@ func showCircular(l *linkedList) {
 }
 func convertSinglytoCircular(l *linkedList) {
 	p := l.head
-	for p.next != nil{
+	for p.next != nil {
 		p = p.next
 	}
 	p.next = l.head

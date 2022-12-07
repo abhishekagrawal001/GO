@@ -3,17 +3,23 @@ package main
 import "fmt"
 
 func search(array []int, k int) int {
-	for i := 0; i < len(array); i++ {
-		if array[i] == k {
-			return i
+	low, high := 0, len(array)-1
+	for low <= high {
+		mid := (low + high) / 2
+		if array[mid] == k {
+			return mid
+		} else if array[mid] > k {
+			high = mid - 1
+		} else {
+			low = mid + 1
 		}
 	}
 	return -1
 }
 
 func main() {
-	arr := []int{5, 2, 7, 4, 9}
-	k := 4
+	arr := []int{1, 2, 3, 4, 5}
+	k := 1
 	result := search(arr, k)
 	if result != -1 {
 		fmt.Printf("Element %v was found at index %v", k, result)

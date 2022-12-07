@@ -1,11 +1,12 @@
 package main
+
 import "fmt"
 
 type Node struct {
 	data int
 	next *Node
 }
-type linkedList struct{
+type linkedList struct {
 	head *Node
 }
 
