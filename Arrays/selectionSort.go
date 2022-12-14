@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func SelectionSort(arr [6]int) {
+func SelectionSort(arr []int) {
 
 	for i := 0; i < len(arr)-1; i++ {
 		minIndex := i
@@ -22,6 +22,6 @@ func SelectionSort(arr [6]int) {
 }
 
 func main() {
-	arr := [6]int{4, 5, 7, 1, 3, 0}
+	arr := []int{4, 5, 1, 3, 2}
 	SelectionSort(arr)
 }
